@@ -31,24 +31,20 @@ class Population {
 	}
 
 	nextGen() {
-
 		this.calFit()
 
 		let b = []
-
 		for (let i = 0; i < total * 0.20; i++) {
 			b.push(this.pickOne());
 		}
 
 		let n = [];
 		let brain = [];
-
 		for (let i = 0; i < total * 0.80; i++) {
 			n.push(new NN(4, 2, 1, [8]));
 			brain.push(NN_child.createChild(n[i]));
 			b.push(new bird(brain[i]));
 		}
-
 		for (let i = 0; i < total; i++) {
 			b[i].label = generation;
 		}
