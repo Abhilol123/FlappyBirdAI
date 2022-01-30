@@ -1,6 +1,7 @@
+// You can change to config to play around with parameters
 let n = [];
 let brain = [];
-let total = 1000;
+let total = 1000; // Total number of birds per generation.
 let b = [];
 let G = 0.5;
 let time2 = 0;
